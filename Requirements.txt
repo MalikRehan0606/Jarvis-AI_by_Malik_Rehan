@@ -1,0 +1,14 @@
+Libraries used are
+importing pyttsx3
+importing speech_recognition
+importing requests
+importing BeautifulSoup
+importing datetime
+importing time
+importing wikipedia
+importing webbrowser
+importing os
+importing pyautogui
+importing random
+importing notification
+importing mixer
