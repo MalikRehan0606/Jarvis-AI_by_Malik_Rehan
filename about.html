@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @font-face {
+      font-family: 'Nutbolts';
+      src: url('fonts/Nutbolts.ttf') format('truetype');
+    }
+
+    body {
+      margin: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      background: url("jarvis.png") no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end; /* Align items to the right */
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      padding: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #f60606;
+      padding: 10px 20px;
+      font-size: 24px;
+    }
+
+    .nav-items a i {
+      margin-right: 8px;
+    }
+
+    .about {
+      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px;
+      text-align: left;
+      max-width: 600px; /* Limit the width */
+      font-size: 18px;
+      margin-right: 100px; /* Adjust this value to move it more to the right */
+    }
+
+    h1 {
+      font-family: 'Nutbolts', sans-serif;
+      color: #f60606;
+      font-size: 48px;
+      margin-bottom: 20px; /* Add space below the title */
+    }
+
+    p, ul {
+        color: aqua;
+      margin-bottom: 10px; /* Add space between paragraphs and lists */
+    }
+
+    ul {
+        color:aqua;
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav-items">
+    <a href="other.html"><i class="fas fa-home"></i> Home</a>
+  </div>
+  <div class="about">
+    <h1>About</h1>  
+    <p>The jarvis consists of:</p>
+    <ul>
+      <li>importing  <code>pyttsx3</code></li>
+      <li>importing <code>speech_recognition </code></li>
+      <li>importing <code>requests</code></li>
+      <li>importing <code>BeautifulSoup</code></li>
+      <li>importing <code>datetime</code></li>
+      <li>importing <code>time</code></li>
+      <li>importing <code>wikipedia</code></li>
+      <li>importing <code>webbrowser</code></li>
+      <li>importing <code>os</code></li>
+      <li>importing <code>pyautogui</code></li>
+      <li>importing <code>random</code></li>
+      <li>importing <code>notification</code></li>
+      <li>importing <code>mixer</code></li>
+        <li>importing <code>speedtest</code></li>
+    </ul>
+  </div>
+</body>
+
+</html>

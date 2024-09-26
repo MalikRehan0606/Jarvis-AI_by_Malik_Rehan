@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Run Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css"> 
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      background: url("jarvis.png") no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* Align items to the start (top) */
+      align-items: flex-end; /* Align items to the right */
+      padding: 20px; /* Add padding for better spacing */
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      position: absolute;
+      top: 20px; /* Adjust top position */
+      right: 20px; /* Adjust right position */
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #f60606;
+      font-size: 24px;
+      display: flex; /* Ensure icon and text are aligned */
+      align-items: center; /* Align items vertically */
+    }
+
+    .nav-items a i {
+      margin-right: 8px; /* Space between icon and text */
+    }
+
+    .content {
+      max-width: 800px;
+      margin-left: auto; /* Center align the content */
+      text-align: center;
+      margin-top: 270px; /* Add margin-top to separate from nav-items */
+      margin-bottom: 12px; /* Add margin-bottom to move content down */
+    }
+
+    h1 {
+      color: #f60606;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px; /* Add margin below the paragraph */
+    }
+
+    .run-project-button {
+      background-color: #5edaf0;
+      color: #000;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px; /* Adjust top margin */
+    }
+
+    .run-project-button:hover {
+      background-color: #4ac5e0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav-items">
+    <a href="other.html"><i class="fas fa-home"></i> Home</a>
+  </div>
+  <div class="content">
+    <p style="margin-bottom: 20px;">Click the button below to start your project.</p>
+    <button class="run-project-button" onclick="startProject()">RunJarvis</button>
+  </div>
+
+  <script>
+    function startProject() {
+      fetch('/RunJarvis', {
+          method: 'GET',
+        })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.text();
+        })
+        .then(data => {
+          alert('Project started successfully');
+          console.log(data);
+          // You can manipulate the DOM or perform actions here upon success
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('An error occurred while starting the project.');
+        });
+    }
+  </script>
+</body>
+
+</html>
